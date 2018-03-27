@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Days"
+            android:label="@string/title_activity_days"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DisplayData" />
+        <activity android:name=".foodItem"></activity>
     </application>
 
 </manifest>
