@@ -9,6 +9,8 @@ public class Food {
     private Double proteins;
     private Double carbs;
     private Double fats;
+    private int id;
+    //private String date;
 
     public Food(String name, Double proteins, Double carbs, Double fats) {
         this.name = name;
@@ -16,6 +18,16 @@ public class Food {
         this.carbs = carbs;
         this.fats = fats;
     }
+
+    public Food(int id, String name, Double proteins, Double carbs, Double fats) {
+        this.name = name;
+        this.id = id;
+        this.proteins = proteins;
+        this.carbs = carbs;
+        this.fats = fats;
+    }
+
+    public int getId() { return this.id; }
 
     public String getName(){
         return this.name;

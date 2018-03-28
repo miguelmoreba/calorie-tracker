@@ -30,10 +30,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onAddButtonClick(View view){
-        boolean isInserted = myDB.insertData(editFood.getText().toString(),
-                editProteins.getText().toString(),
-                editCarbs.getText().toString(),
-                editFats.getText().toString());
+        Double proteins = Double.parseDouble(editProteins.getText().toString());
+        Double carbs = Double.parseDouble(editCarbs.getText().toString());
+        Double fats = Double.parseDouble(editFats.getText().toString());
+        Food food = new Food(editFood.getText().toString(), proteins, carbs, fats);
+        boolean isInserted = myDB.insertData(food);
         if(isInserted == true)
             Toast.makeText(MainActivity.this, "Data inserted", Toast.LENGTH_LONG).show();
         else
