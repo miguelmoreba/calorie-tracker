@@ -65,7 +65,19 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="44dp"
         android:src="@android:drawable/ic_menu_edit"
+        android:onClick="onEditClick"
         app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calories"
+        android:layout_width="76dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.codeclan.calorietracker;
+package com.codeclan.calorietracker.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.codeclan.calorietracker.DB.DatabaseHelper;
+import com.codeclan.calorietracker.Models.Food;
+import com.codeclan.calorietracker.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         editProteins = (EditText)findViewById(R.id.editText_proteins);
         editCarbs = (EditText)findViewById(R.id.editText_carbs);
         editFats = (EditText)findViewById(R.id.editText_fats);
-        btnaddData = (Button)findViewById(R.id.button_add);
+        btnaddData = (Button)findViewById(R.id.button_update);
         btnviewAll = (Button)findViewById(R.id.button_viewAll);
     }
 

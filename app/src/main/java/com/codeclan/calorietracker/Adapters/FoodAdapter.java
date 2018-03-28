@@ -1,13 +1,15 @@
-package com.codeclan.calorietracker;
+package com.codeclan.calorietracker.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.codeclan.calorietracker.Models.Food;
+import com.codeclan.calorietracker.R;
 
 import java.util.ArrayList;
 

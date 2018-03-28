@@ -1,10 +1,15 @@
-package com.codeclan.calorietracker;
+package com.codeclan.calorietracker.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+
+import com.codeclan.calorietracker.DB.DatabaseHelper;
+import com.codeclan.calorietracker.Models.Food;
+import com.codeclan.calorietracker.Adapters.FoodAdapter;
+import com.codeclan.calorietracker.R;
 
 import java.util.ArrayList;
 
@@ -40,5 +45,13 @@ public class DisplayData extends AppCompatActivity {
         listView.setAdapter(foodAdapter);
 
 
+    }
+
+    public void onEditClick(View view) {
+        Intent intent = new Intent(this, EditDataActivity.class);
+        Food selectedFood = (Food) view.getTag();
+
+        intent.putExtra("food", selectedFood);
+        startActivity(intent);
     }
 }
