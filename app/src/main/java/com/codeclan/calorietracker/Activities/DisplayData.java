@@ -48,7 +48,7 @@ public class DisplayData extends AppCompatActivity {
     }
 
     public void onEditClick(View view) {
-        Intent intent = new Intent(this, EditDataActivity.class);
+        Intent intent = new Intent(this, UpdateActivity.class);
         Food selectedFood = (Food) view.getTag();
 
         intent.putExtra("food", selectedFood);

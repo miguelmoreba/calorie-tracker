@@ -34,13 +34,16 @@ public class FoodAdapter extends ArrayAdapter<Food> {
         name.setText(currentFood.getName().toString());
 
         TextView proteins = listItemView.findViewById(R.id.proteins);
-        proteins.setText(currentFood.getProteins().toString());
+        proteins.setText(currentFood.getProteins().toString()+ " proteins");
 
         TextView carbs = listItemView.findViewById(R.id.carbs);
-        carbs.setText(currentFood.getCarbs().toString());
+        carbs.setText(currentFood.getCarbs().toString() + " carbs");
 
         TextView fats = listItemView.findViewById(R.id.fats);
-        fats.setText(currentFood.getFats().toString());
+        fats.setText(currentFood.getFats().toString()+ " fats");
+
+        TextView calories = listItemView.findViewById(R.id.calories);
+        calories.setText(currentFood.getCalories().toString()+ " cal");
 
         ImageButton editButton =  listItemView.findViewById(R.id.edit_button);
         editButton.setTag(currentFood);

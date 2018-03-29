@@ -136,6 +136,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int result = db.update(TABLE_NAME, contentValues, "id = ?", values );
 
+        System.out.println("result is: " + result);
         if (result == -1)
             return false;
         else

@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".Activities.DisplayData" />
         <activity android:name=".foodItem" />
-        <activity android:name=".Activities.EditDataActivity"></activity>
+        <activity android:name=".Activities.UpdateActivity" />
     </application>
 
 </manifest>
