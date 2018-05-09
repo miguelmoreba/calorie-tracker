@@ -20,8 +20,8 @@
         android:id="@+id/UpdateText_Proteins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="32dp"
         android:text="Proteins"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UpdateText_Protei" />
@@ -30,21 +30,21 @@
         android:id="@+id/UpdateText_Carbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="92dp"
         android:text="Carbs"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpdateText_Proteins" />
+        app:layout_constraintStart_toEndOf="@+id/UpdateText_Proteins"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/UpdateText_Fats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="92dp"
         android:text="Fats"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpdateText_Carbs" />
+        app:layout_constraintStart_toEndOf="@+id/UpdateText_Carbs"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/updateName_Update"
@@ -75,33 +75,33 @@
         android:id="@+id/numberbox_proteins"
         android:layout_width="46dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateName_Update" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateText_Proteins" />
 
     <EditText
         android:id="@+id/numberbox_carbs"
         android:layout_width="46dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberbox_proteins" />
+        app:layout_constraintStart_toEndOf="@+id/numberbox_proteins"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateText_Carbs" />
 
     <EditText
         android:id="@+id/numberbox_fats"
         android:layout_width="46dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberbox_carbs" />
+        app:layout_constraintStart_toEndOf="@+id/numberbox_carbs"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateText_Fats" />
 
 </android.support.constraint.ConstraintLayout>

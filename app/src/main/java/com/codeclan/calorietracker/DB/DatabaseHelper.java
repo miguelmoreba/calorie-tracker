@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.codeclan.calorietracker.Models.Food;
+import com.codeclan.calorietracker.Models.Meal;
 
 import java.util.ArrayList;
 
@@ -39,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, PROTEINS DOUBLE, CARBS DOUBLE, FATS DOUBLE)");
+        db.execSQL("create table " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, PROTEINS DOUBLE, CARBS DOUBLE, FATS DOUBLE, DATE TEXT, MEAL TEXT)");
         
     }
 
@@ -56,6 +57,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_3, food.getProteins());
         contentValues.put(COL_4, food.getCarbs());
         contentValues.put(COL_5, food.getFats());
+//        contentValues.put(COL_6, food.getDate());
+//        contentValues.put(COL_7, food.getMeal().toString());
         long result = db.insert(TABLE_NAME, null, contentValues);
         if (result == -1)
             return false;
@@ -112,7 +115,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Double proteins = res.getDouble(2);
             Double carbs = res.getDouble(3);
             Double fats = res.getDouble(4);
+//            String date = res.getString(5);
+//            Meal meal = Meal.valueOf(res.getString(6));
 
+
+//            Food food = new Food(id, name, proteins, carbs, fats, date, meal);  for when date and meal are operating
             Food food = new Food(id, name, proteins, carbs, fats);
 
             allFoods.add(food);
@@ -131,12 +138,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_3, food.getProteins());
         contentValues.put(COL_4, food.getCarbs());
         contentValues.put(COL_5, food.getFats());
+//        contentValues.put(COL_6, food.getDate());
+//        contentValues.put(COL_7, food.getMeal().toString());
 
         String[] values = { String.valueOf(food.getId())  };
 
         int result = db.update(TABLE_NAME, contentValues, "id = ?", values );
 
-        System.out.println("result is: " + result);
         if (result == -1)
             return false;
         else

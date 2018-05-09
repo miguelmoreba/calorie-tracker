@@ -19,6 +19,7 @@
         <activity android:name=".Activities.DisplayData" />
         <activity android:name=".foodItem" />
         <activity android:name=".Activities.UpdateActivity" />
+        <activity android:name=".Activities.DateSelectorActivity"></activity>
     </application>
 
 </manifest>

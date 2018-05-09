@@ -1,6 +1,8 @@
 package com.codeclan.calorietracker.Models;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.util.Date;
 
 /**
  * Created by miguelmorenobaladron on 3/27/18.
@@ -13,7 +15,7 @@ public class Food implements Serializable{
     private Double fats;
     private Integer calories;
     private int id;
-    private String date;
+    private Date date;
     private Meal meal;
 
     public Food(String name, Double proteins, Double carbs, Double fats) {  // Constructor for when you don't need ID (without date or meal)
@@ -35,7 +37,7 @@ public class Food implements Serializable{
         this.calories = createCalories();
     }
 
-    public Food(int id, String name, Double proteins, Double carbs, Double fats, String date, Meal meal) {
+    public Food(int id, String name, Double proteins, Double carbs, Double fats, Date date, Meal meal) {
         this.id = id;
         this.name = name;
         this.proteins = proteins;
@@ -52,7 +54,9 @@ public class Food implements Serializable{
 
     }
 
-    public int getId() { return this.id; }
+    public int getId(){
+        return this.id;
+    }
 
     public String getName(){
         return this.name;
@@ -72,6 +76,14 @@ public class Food implements Serializable{
 
     public Integer getCalories(){
         return this.calories;
+    }
+
+    public Date getDate(){
+        return this.date;
+    }
+
+    public Meal getMeal(){
+        return this.meal;
     }
 
     public String toString() {

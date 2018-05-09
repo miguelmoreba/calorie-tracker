@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.codeclan.calorietracker.Adapters.MealAdapter;
 import com.codeclan.calorietracker.DB.DatabaseHelper;
 import com.codeclan.calorietracker.Models.Food;
+import com.codeclan.calorietracker.Models.Meal;
 import com.codeclan.calorietracker.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editFood, editProteins, editCarbs, editFats;
     Button btnaddData;
     Button btnviewAll;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         editFats = (EditText)findViewById(R.id.editText_fats);
         btnaddData = (Button)findViewById(R.id.button_update);
         btnviewAll = (Button)findViewById(R.id.button_viewAll);
+//        spinner = (Spinner)findViewById(R.id.spinner_create);
+//        spinner.setAdapter(new MealAdapter(this, R.layout.support_simple_spinner_dropdown_item, Meal.BR));
     }
 
     public void onAddButtonClick(View view){

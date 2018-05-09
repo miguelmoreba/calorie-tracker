@@ -5,8 +5,21 @@ package com.codeclan.calorietracker.Models;
  */
 
 public enum Meal {
-    BREAKFAST,
-    LUNCH,
-    DINNER,
-    SNACKS,
+    BREAKFAST("Breakfast"),
+    LUNCH("Lunch"),
+    DINNER("Dinner"),
+    SNACKS("Snacks");
+
+    private String friendlyName;
+
+    Meal(String friendlyName){
+        this.friendlyName = friendlyName;
+    }
+
+    @Override
+    public String toString(){
+        return friendlyName;
+    }
+    
+
 }
